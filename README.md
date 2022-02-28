@@ -1,5 +1,7 @@
 # web-star-background
  用canvas绘制的网页版星星背景
+# 预览
+![](https://raw.githubusercontent.com/q-mona/mona/master/images/preview.gif)
 # 使用说明
 详细请看index.html
 ```
