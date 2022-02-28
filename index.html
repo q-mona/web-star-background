@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>星星</title>
+</head>
+
+<body>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background: #000 url(./images/bg.webp);
+        }
+    </style>
+    <canvas id="star"></canvas>
+    <script src="star.js"></script>
+    <script>
+        const cfg = {
+            "star": {
+                "min_size": 10,
+                "max_size": 40,
+                "rot": 0,
+                "rot_step": 0,
+                "min_step": 0.5,
+                "max_step": 2,
+                "num": 20
+            },
+            "moon": {
+                "min_size": 10,
+                "max_size": 40,
+                "rot": 360,
+                "rot_step": 0,
+                "min_step": 0.5,
+                "max_step": 2,
+                "num": 20
+            },
+            "canvas": {
+                "width": window.innerWidth,
+                "height": window.innerHeight,
+                "interval": 40,
+                "globalAlpha": 0.6,
+                "direction": "down",
+                "x": window.innerWidth,
+                "y": 400,
+            }
+        }
+        const el_star_img = document.createElement('img')
+        el_star_img.src = './images/star.png'
+        const el_moon_img = document.createElement('img')
+        el_moon_img.src = './images/moon.png'
+
+        loadStar(el_star_img, el_moon_img, cfg)
+    </script>
+</body>
+
+</html>
