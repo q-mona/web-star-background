@@ -41,9 +41,9 @@ const cfg = {
 loadStar(el_star_img, el_moon_img, cfg)
 // el_star_img、el_moon_img为星星、月亮图片，可自定义
 // cfg为上方的配置信息
-```
+```  
 
-在vue3中使用
+在vue3中使用  
 由于直接在index.html引入图片打包后路径可能有误，因此建议在.vue文件中初始化并记得在star.js中export loadStar。
 ```
 <script setup>
