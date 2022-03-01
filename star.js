@@ -65,7 +65,7 @@ const starAnimation = () => {
         ctx.rotate(pocket.rot * Math.PI / 180)
 
         pocket.rot += pocket.rot_step
-        if (pocket.rot == 360) {
+        if (pocket.rot >= 360) {
             pocket.rot = 0
         }
 
