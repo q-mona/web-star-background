@@ -42,3 +42,55 @@ loadStar(el_star_img, el_moon_img, cfg)
 // el_star_img、el_moon_img为星星、月亮图片，可自定义
 // cfg为上方的配置信息
 ```
+
+在vue3中使用
+由于直接在index.html引入图片打包后路径可能有误，因此建议在.vue文件中初始化并记得在star.js中export loadStar。
+```
+<script setup>
+import loadStar from '@/js/star.js'
+import star from '@/images/star.png' // 导入assets的图片
+import moon from '@/images/moon.png'
+
+const cfg = {
+  "star": {
+    "min_size": 10,
+    "max_size": 30,
+    "rot": 360,
+    "rot_step": 0,
+    "min_step": 1,
+    "max_step": 4,
+    "num": 15
+  },
+  "moon": {
+    "min_size": 10,
+    "max_size": 30,
+    "rot": 360,
+    "rot_step": 0,
+    "min_step": 1,
+    "max_step": 4,
+    "num": 15
+  },
+  "canvas": {
+    "width": window.innerWidth,
+    "height": window.innerHeight,
+    "interval": 60,
+    "globalAlpha": 0.6,
+    "direction": "down",
+    "x": window.innerWidth,
+    "y": 300,
+  }
+}
+const el_star_img = document.createElement('img')
+el_star_img.src = star
+const el_moon_img = document.createElement('img')
+el_moon_img.src = moon
+
+loadStar(el_star_img, el_moon_img, cfg)
+</script>
+
+<template>
+</template>
+
+<style scoped>
+</style>
+```
