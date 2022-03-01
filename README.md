@@ -31,7 +31,7 @@ const cfg = {
         "interval": 40, // 动画间隔(ms)
         "globalAlpha": 0.6, // 画布透明度
         "direction": "down", // 方向(up down left right)
-        // 生成星星的范围(画布左上为远点 xy为宽长宽的矩形)
+        // 生成星星的范围(画布左上为原点 xy为宽长宽的矩形)
         "x": window.innerWidth, 
         "y": 400,
     }
