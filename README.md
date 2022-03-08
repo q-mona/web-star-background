@@ -44,7 +44,8 @@ loadStar(el_star_img, el_moon_img, cfg)
 ```  
 
 在vue3中使用  
-由于直接在index.html引入图片打包后路径可能有误，因此建议在.vue文件中初始化并记得在star.js中export loadStar。
+由于直接在index.html引入图片打包后路径可能有误，因此建议在.vue文件中初始化并记得在star.js中export loadStar。  
+或者将图片放在public文件夹下。
 ```
 <script setup>
 import loadStar from '@/js/star.js'
